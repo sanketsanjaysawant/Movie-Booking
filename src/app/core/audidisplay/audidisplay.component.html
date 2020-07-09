@@ -1,0 +1,32 @@
+
+<div class="containers">
+    <label for="shows">Choose a show no:</label>
+    <select (change)="onChange($event)">
+        <option *ngFor="let a of audis" [value]="a.id">{{a.name}}</option>
+    </select>
+
+    <div *ngIf="audi1">
+        <pre>
+
+        Audi1:  A1 A2 A3 A4 A5 A6 A7 A8 A9
+                B1 B2 B3 B4 B5 B6 B7 B8
+                C2 C3 C4 C5 C6 C7
+        </pre>
+    </div>
+    <div *ngIf="audi2">
+        <pre>
+
+        Audi2:  A1 A2 A3 A4 A5 A6 A7 A8 A9
+                   B2 B3 B4 B5 B6
+                C1 C2 C3 C4 C5 C6 C7
+        </pre>
+    </div>
+    <div *ngIf="audi3">
+        <pre>
+
+        Audi3:  A1 A2 A3 A4 A A6 A7
+                B1 B2 B3 B4 B5 B6 B7 B8
+                      C3 C4 C5 C6 C7 C8
+        </pre>
+    </div>
+</div>

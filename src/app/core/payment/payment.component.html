@@ -1,0 +1,24 @@
+<div class="container">
+    Please click to proceed for payment
+    <button type="submit" [value]="Pay" (click)="proceedForPayment()">Confirm & Pay</button>
+
+    <div *ngIf="paymentDoneFlag">
+        <p>Payment done for {{this.seatsForPayment}} in Audi No {{this.audiNumber}}</p>
+    <pre>
+    Successfully Booked - Show {{this.audiNumber}}
+    Subtotal: Rs.{{this.totalPriceNoTax}}
+    Service Tax @ 14%: Rs.{{this.serviceTax}}
+    Swacch Bharat Cess @ 0.5%: Rs.{{this.bharatKalyanCess}}
+    Krishi Kalyan Cess @ 0.5%: Rs.{{this.bharatKalyanCess}}
+    Total: Rs.{{this.finalTicketPrice}}
+    
+
+    <b>Total Sales:</b>
+    Revenue: Rs. {{this.fullRevenue}}
+    Service Tax: Rs. {{this.totalServiceTax}}
+    Swacch Bharat Cess: Rs. {{this.totalBharatCess}}
+    Krishi Kalyan Cess: Rs. {{this.totalBharatCess}}
+
+    </pre>
+    </div>
+</div>

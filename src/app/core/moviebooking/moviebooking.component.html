@@ -1,0 +1,12 @@
+<html>
+
+    <div class="container">
+
+        Please enter the seat nos:<input type="text" multiple #seatNoCheck>
+        <button type="submit" (click)="sumbitBooking(seatNoCheck.value)">Check Availability</button>
+        <div>
+            <p *ngFor="let seat of this.displayBookedSeats">{{seat}} is booked </p>
+            <p *ngFor="let seat of this.seatAvailableToDisplay">{{seat}} is available to book </p>
+        </div>
+    </div>
+</html>
